@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Quicksand:wght@400;500;600;700&family=Roboto&family=Roboto+Mono&family=Source+Sans+Pro&family=Space+Mono&display=swap');
 
 
+
+:root{
+    --color-white: white;
+}
+
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -38,7 +43,7 @@ li{
 }
 
 a{
-    color: black;
+    color: var(--color-white);
     font-size: 2rem;
     text-decoration: none;
     font-family: 'Concert One', cursive;
@@ -46,13 +51,22 @@ a{
 }
 
 .links a{
-    background: white;
-    border: solid 2px white;
+    background: inherit;
+    border: solid 2px var(--color-white);
     border-radius: 2rem;
     padding-bottom: 2px;
 }
 
+.links a:hover{
+    background: var(--color-white);
+    color: inherit;
+    border: solid 2px var(--color-white);
+    border-radius: 2rem;
+    padding-bottom: 2px;
+}
+
+
 i{
-    color: white;
+    color: var(--color-white);
     font-size: 3.2rem;
 }
