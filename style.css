@@ -38,6 +38,22 @@ ul{
 }
 
 
+.toggle-button{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    transform: translate(0, -3rem);
+}
+
+.dropdown-menu{
+    display: none;
+}
+
+.dropdown-menu.open{
+    display: block;
+}
+
+
 li{
     list-style: none;
 }
@@ -50,11 +66,16 @@ a{
     padding: 0 5px;
 }
 
+.links{
+    padding: 0 4rem;
+}
+
 .links a{
     background: inherit;
     border: solid 2px var(--color-white);
     border-radius: 2rem;
     padding-bottom: 2px;
+    
 }
 
 .links a:hover{
