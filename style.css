@@ -27,8 +27,11 @@ canvas{
 
 ul{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
     padding: 0 10px;
+    gap: 2rem;
 }
 
 .logo{
