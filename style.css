@@ -29,7 +29,7 @@ canvas{
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 1);
     border: solid white 1px;
     margin: 1rem;
     padding: 2rem;
@@ -86,6 +86,8 @@ h2{
 }
 
 .links{
+    display: grid;
+    grid-template-areas: "1 1 1";
     padding: 0 4rem;
 }
 
@@ -95,12 +97,29 @@ h2{
 }
 
 .links a:hover{
-    background: var(--color-white);
-    color: blue;
+    color: plum;
+    text-shadow: var(--color-white) 1px 0 10px;
 }
 
 
 i{
     color: var(--color-white);
     font-size: 3.2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 740px) and (max-width: 1000px) {
+    .links{
+        display: grid;
+        grid-template-areas: "1 1 1 1 1 1 1 1 1";
+    }
+}
+
+
+@media (max-width: 740px) {
+    .links{
+        display: grid;
+        grid-template-areas: "1";
+    }
 }
