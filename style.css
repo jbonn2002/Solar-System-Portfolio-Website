@@ -25,13 +25,14 @@ canvas{
     z-index: -1;
 }
 
-ul{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    padding: 0 10px;
-    gap: 2rem;
+.menu-container{
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border: solid white 1px;
+    margin: 1rem;
+    padding: 2rem;
 }
 
 .logo{
@@ -42,18 +43,28 @@ ul{
 
 
 .toggle-button{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2rem;
+    position: absolute;
+    padding: 0 2rem;
     transform: translate(0, -3rem);
+    width: fit-content;
 }
 
 .dropdown-menu{
-    display: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.dropdown-menu.open{
-    display: block;
+.menu-container{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0, -2rem);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in;
+}
+
+.menu-container.open{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(0);
 }
 
 
@@ -69,24 +80,23 @@ a{
     padding: 0 5px;
 }
 
+h2{
+    color: white;
+    font-size: 2rem;
+}
+
 .links{
     padding: 0 4rem;
 }
 
 .links a{
-    background: inherit;
-    border: solid 2px var(--color-white);
-    border-radius: 2rem;
-    padding-bottom: 2px;
+    background: none;
     
 }
 
 .links a:hover{
     background: var(--color-white);
-    color: inherit;
-    border: solid 2px var(--color-white);
-    border-radius: 2rem;
-    padding-bottom: 2px;
+    color: blue;
 }
 
 

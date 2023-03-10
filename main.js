@@ -190,7 +190,7 @@ animate()
 
 const toggleButton = document.querySelector('.toggle-button')
 const toggleButtonIcon = document.querySelector('.toggle-button i')
-const dropDownMenu =  document.querySelector('.dropdown-menu')
+const dropDownMenu =  document.querySelector('.menu-container')
 
 toggleButton.onclick = function () {
   dropDownMenu.classList.toggle('open')
