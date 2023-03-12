@@ -12,6 +12,7 @@
 }
 
 *{
+    font-family: 'Concert One', cursive;
     font-size: 62.5%;
     padding: 0;
     margin: 0;
@@ -72,31 +73,34 @@ li{
     list-style: none;
 }
 
-a{
+.planet-names{
     color: var(--color-white);
     font-size: 2rem;
     text-decoration: none;
-    font-family: 'Concert One', cursive;
-    padding: 0 5px;
+    padding: 0 1rem;
 }
 
-h2{
+.dropdown-header{
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 5px;
 }
 
-.links{
+.planet-list{
     display: grid;
     grid-template-areas: "1 1 1";
-    padding: 0 4rem;
+    /* padding: 0 4rem; */
+    gap: 0.5rem;
 }
 
-.links a{
+.planet-list a{
     background: none;
     
 }
 
-.links a:hover{
+.planet-list a:hover{
     color: plum;
     text-shadow: var(--color-white) 1px 0 10px;
 }
@@ -110,7 +114,7 @@ i{
 /* MEDIA QUERIES */
 
 @media (min-width: 740px) and (max-width: 1000px) {
-    .links{
+    .planet-list{
         display: grid;
         grid-template-areas: "1 1 1 1 1 1 1 1 1";
     }
@@ -118,7 +122,7 @@ i{
 
 
 @media (max-width: 740px) {
-    .links{
+    .planet-list{
         display: grid;
         grid-template-areas: "1";
     }
