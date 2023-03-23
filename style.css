@@ -48,7 +48,7 @@ canvas{
 
 .menu-container, .stacked-card-container{
     border: solid white 1px;
-    margin: 1rem;
+    margin: 2rem;
     padding: 2rem;
     pointer-events: none;
     /* transform: translate(0, -2rem); */
@@ -71,19 +71,29 @@ canvas{
 }
 
 .one{
-    transform: translateY(20px);
-    /* margin: 5px 5px 5px 0; */
+    transition: opacity 100ms ease-in-out;    
 }
-
-/* .two{
-    margin: 8px 8px 8px 0;
+.two {
+    transition: opacity 200ms ease-in-out;    
 }
-
 .three{
-    margin: ;
-} */
+    transition: opacity 300ms ease-in-out;    
+}
 
+.one.open{
+    margin: 5px 5px 5px 0;
+    transition: opacity 100ms ease-in-out;
+}
 
+.two.open{
+    margin: 10px 10px 10px 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.three.open{
+    margin: 15px 15px 15px 0;
+    transition: opacity 300ms ease-in-out;
+}
 
 
 .container{
@@ -181,12 +191,31 @@ i{
         display: grid;
         grid-template-areas: "1 1 1 1 1 1 1 1 1";
     }
+    .stacked-card-container{
+        height: 106px;
+        width: 769px;
+    }
+
 }
 
+@media (max-width: 1000px) and (min-width: 850px) {
+    .logo{
+        justify-content: flex-start;
+        translate: 3rem 8rem;
+    }
 
+
+}
+
+    
 @media (max-width: 740px) {
     .planet-list{
-        display: grid;
-        grid-template-areas: "1";
+            display: grid;
+            grid-template-areas: "1";
+    }
+
+    .stacked-card-container{
+        height: 338px;
+        width: 139px;
     }
 }
