@@ -114,6 +114,9 @@ const neptune = createPlanet(4, neptuneTexture, 225);
 const pluto = createPlanet(1, plutoTexture, 300);
 
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.maxDistance = 500;
+controls.minDistance = 50;
 
 
 function addStar () {

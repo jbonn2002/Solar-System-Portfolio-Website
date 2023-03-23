@@ -51,22 +51,20 @@ canvas{
     margin: 2rem;
     padding: 2rem;
     pointer-events: none;
-    /* transform: translate(0, -2rem); */
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in;
 }
 
 .menu-container{
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
-    /* box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 1); */
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in;
 }
 
 .stacked-card-container{
     background-color: black;
     position: absolute;
-    height: 165px;
-    width: 313px;
+    height: 164px;
+    width: 393px;
     border: solid white 1px;
 }
 
@@ -154,7 +152,7 @@ li{
 .planet-list{
     display: grid;
     grid-template-areas: "1 1 1";
-    /* padding: 0 4rem; */
+    padding: 0 4rem;
     gap: 0.5rem;
 }
 
@@ -164,7 +162,7 @@ li{
 }
 
 .planet-list a:hover{
-    color: plum;
+    color: #AAFF00;
     text-shadow: var(--color-white) 1px 0 10px;
 }
 
