@@ -70,16 +70,6 @@ canvas{
     border: solid white 1px;
 }
 
-.one{
-    transition: opacity 100ms ease-in-out;    
-}
-.two {
-    transition: opacity 200ms ease-in-out;    
-}
-.three{
-    transition: opacity 300ms ease-in-out;    
-}
-
 .one.open{
     margin: 5px 5px 5px 0;
     transition: opacity 100ms ease-in-out;
