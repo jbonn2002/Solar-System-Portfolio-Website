@@ -26,15 +26,6 @@ canvas{
     z-index: -1;
 }
 
-.menu-container{
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
-    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 1);
-    border: solid white 1px;
-    margin: 1rem;
-    padding: 2rem;
-}
 
 .logo{
     display: flex;
@@ -55,17 +46,89 @@ canvas{
     justify-content: flex-end;
 }
 
+.menu-container, .stacked-card-container{
+    border: solid white 1px;
+    margin: 1rem;
+    padding: 2rem;
+    pointer-events: none;
+    /* transform: translate(0, -2rem); */
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in;
+}
+
 .menu-container{
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    /* box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 1); */
+}
+
+.stacked-card-container{
+    background-color: black;
+    position: absolute;
+    height: 165px;
+    width: 313px;
+    border: solid white 1px;
+}
+
+.one{
+    transform: translateY(20px);
+    /* margin: 5px 5px 5px 0; */
+}
+
+/* .two{
+    margin: 8px 8px 8px 0;
+}
+
+.three{
+    margin: ;
+} */
+
+
+
+
+.container{
     opacity: 0;
     pointer-events: none;
     transform: translate(0, -2rem);
     transition: opacity 200ms ease-in-out, transform 200ms ease-in;
 }
 
-.menu-container.open{
+.container.open{
     opacity: 1;
     pointer-events: auto;
     transform: translate(0);
+}
+
+
+.mercury-container{
+    display: grid;
+    grid-template-areas: "h2 h2 h2" "img span span" "p p p";
+    width: 313px;
+    position: absolute;
+    z-index: 9;
+    border: 1px white solid;
+    color: white;
+    font-size: 2rem;
+}
+
+.mercury-container.open{
+    opacity: 0;
+}
+
+.mercury-container h2{
+    grid-area: h2;
+}
+
+.mercury-container p {
+    grid-area: p;
+}
+
+.mercury-container img{
+    grid-area: img;
+}
+
+.mercury-container span{
+    grid-area: span;
 }
 
 

@@ -191,9 +191,17 @@ animate()
 const toggleButton = document.querySelector('.toggle-button')
 const toggleButtonIcon = document.querySelector('.toggle-button i')
 const dropDownMenu =  document.querySelector('.menu-container')
+const mercuryContainer = document.querySelector('.mercury-container')
+const stackedCardContainer = document.querySelectorAll('.stacked-card-container')
+
+
 
 toggleButton.onclick = function () {
   dropDownMenu.classList.toggle('open')
+  mercuryContainer.classList.toggle('open')
+  // stackedCardContainer.classList.toggle('open')
+  stackedCardContainer.forEach( x => x.classList.toggle('open'))
+
   const isOpen = dropDownMenu.classList.contains('open')
 
   toggleButtonIcon.classList = isOpen
